@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Causal inference with R
 ================
 
 ### posit::conf 2023
