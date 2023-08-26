@@ -1,80 +1,108 @@
-Causal inference with R
-================
 
-### posit::conf 2023
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-by INSTRUCTOR_NAME
+# Visit the main workshop repository
 
------
+This repo is a snapshot in time of the workshop delivered at
+`posit::conf(2023)`. [Visit the workshop’s main repo for the latest
+version of the
+material](https://github.com/malcolmbarrett/causal_inference_r_workshop).
 
-INSTRUCTIONS FOR INSTRUCTORS: Please insert information about your
-workshop below. Then, add workshop content in the materials folder and
-link to each session’s materials from the schedule below. You are
-welcomed to add more rows to the schedule. We just ask that you take
-breaks at the specified times. Once you are done adding information, you
-can remove these instructions from the README.
+## Causal Inference in R Workshop
 
-Alternatively, you can completely redo the organization of this repo 
-as a Quarto website or some other format you prefer to host your workshop
-materials. The only requirement is that your workshop materials are hosted 
-here.
-
------
+------------------------------------------------------------------------
 
 :spiral_calendar: September 17 and 18, 2023  
-:alarm_clock:     09:00 - 17:00  
-:hotel:           ROOM TBD  
-:writing_hand:    [pos.it/conf](http://pos.it/conf)
+:alarm_clock: 09:00 - 17:00  
+:hotel: ROOM TBD  
+:writing_hand: [pos.it/conf](http://pos.it/conf)
 
------
+------------------------------------------------------------------------
 
-## Overview
+### Slides
 
-ADD ABSTRACT
+- [00
+  Intro](https://causal-inference-r-workshop.netlify.app/00-intro.html)
+- [01 Whole
+  Game](https://causal-inference-r-workshop.netlify.app/01-causal_modeling_whole_game.html)
+- [02 When Standard Methods
+  Succeed](https://causal-inference-r-workshop.netlify.app/02-when-standard-methods-succeed.html)
+- [03 Causal Inference with `group_by` and
+  `summarise`](https://causal-inference-r-workshop.netlify.app/03-causal-inference-with-group-by-and-summarise.html)
+- [04 Causal
+  Diagrams](https://causal-inference-r-workshop.netlify.app/04-dags.html)
+- [05 Causal Inference is Not Just a Statistics
+  Problem](https://causal-inference-r-workshop.netlify.app/05-quartets.html)
+- [06 Introduction to Propensity
+  Scores](https://causal-inference-r-workshop.netlify.app/06-pscores.html)
+- [07 Using Propensity
+  Scores](https://causal-inference-r-workshop.netlify.app/07-using-pscores.html)
+- [08 Checking Propensity
+  Scores](https://causal-inference-r-workshop.netlify.app/08-pscore-diagnostics.html)
+- [09 Fitting the outcome
+  model](https://causal-inference-r-workshop.netlify.app/09-outcome-model.html)
+- [10 Continuous Exposures and
+  G-Computation](https://causal-inference-r-workshop.netlify.app/10-continuous-g-comp.html)
+- [11 Tipping Point Sensitivity
+  Analyses](https://causal-inference-r-workshop.netlify.app/11-tipr.html)
+- [12 Whole Game (Your
+  Turn)](https://causal-inference-r-workshop.netlify.app/12-whole_game-2.html)
+- [13 Bonus: Selection
+  Bias](https://causal-inference-r-workshop.netlify.app/13-bonus-selection-bias.html)
+- [14 Bonus: Continous Exposures with Propensity
+  Scores](https://causal-inference-r-workshop.netlify.app/14-bonus-continuous-pscores.html)
 
-**This workshop is for you if you...*
+### Installing materials locally
 
-ADD THREE POINTS
+We will be using Posit Cloud for the workshop, but if you would like to
+install the required packages and course materials, we have an R package
+called
+{[causalworkshop](https://github.com/malcolmbarrett/causalworkshop)} to
+help you do that! You can install
+{[causalworkshop](https://github.com/malcolmbarrett/causalworkshop)}
+from GitHub with:
 
-## Prework
+``` r
+install.packages("remotes")
+remotes::install_github("malcolmbarrett/causalworkshop")
+```
 
-ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO
-COMPLETE PRIOR TO THE WORKSHOP. THIS COULD BE A LINK TO A THREAD ON
-RSTUDIO COMMUNITY, PACKAGE INSTALL INSTRUCTIONS, HOW TO GET AN
-RSTUDIO.CLOUD ACCOUNT, ETC.
+Once you’ve installed the package, install the workshop with
+
+``` r
+causalworkshop::install_workshop()
+```
+
+By default, this package downloads the materials to a conspicuous place
+like your Desktop. You can also tell `install_workshop()` exactly where
+to put the materials:
+
+``` r
+causalworkshop::install_workshop("a/path/on/your/computer")
+```
 
 ## Schedule
 
 ### Day 1
 
-| Time          | Activity         |
-| :------------ | :--------------- |
-| 09:00 - 10:30 | Session 1        |
-| 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Session 2        |
-| 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Session 3        |
-| 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Session 4        |
+| Time          | Activity       |
+|:--------------|:---------------|
+| 09:00 - 10:30 | Session 1      |
+| 10:30 - 11:00 | *Coffee break* |
+| 11:00 - 12:30 | Session 2      |
+| 12:30 - 13:30 | *Lunch break*  |
+| 13:30 - 15:00 | Session 3      |
+| 15:00 - 15:30 | *Coffee break* |
+| 15:30 - 17:00 | Session 4      |
 
 ### Day 2
 
-| Time          | Activity         |
-| :------------ | :--------------- |
-| 09:00 - 10:30 | Session 1        |
-| 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Session 2        |
-| 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Session 3        |
-| 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Session 4        |
-
-## Instructor
-
-ADD INSTRUCTOR BIO
-
------
-
-![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is
-licensed under a [Creative Commons Attribution 4.0 International
-License](https://creativecommons.org/licenses/by/4.0/).
+| Time          | Activity       |
+|:--------------|:---------------|
+| 09:00 - 10:30 | Session 1      |
+| 10:30 - 11:00 | *Coffee break* |
+| 11:00 - 12:30 | Session 2      |
+| 12:30 - 13:30 | *Lunch break*  |
+| 13:30 - 15:00 | Session 3      |
+| 15:00 - 15:30 | *Coffee break* |
+| 15:30 - 17:00 | Session 4      |
